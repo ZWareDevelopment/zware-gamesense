@@ -1,1 +1,1 @@
-start gradlew.bat build
+start gradlew.bat setupDecompWorkspace build
