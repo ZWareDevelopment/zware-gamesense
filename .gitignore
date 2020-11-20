@@ -154,3 +154,8 @@ gradle-app.setting
 **/build/
 
 # End of https://www.toptal.com/developers/gitignore/api/java,intellij,gradle,forgegradle
+.classpath
+.project
+.settings/org.eclipse.jdt.core.prefs
+ZWare.cc_Client.launch
+ZWare.cc_Server.launch
