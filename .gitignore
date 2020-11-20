@@ -159,3 +159,4 @@ gradle-app.setting
 .settings/org.eclipse.jdt.core.prefs
 ZWare.cc_Client.launch
 ZWare.cc_Server.launch
+.settings/org.eclipse.buildship.core.prefs

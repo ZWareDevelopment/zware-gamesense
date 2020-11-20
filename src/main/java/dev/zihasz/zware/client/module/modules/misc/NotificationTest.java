@@ -30,13 +30,13 @@ public class NotificationTest extends Module {
     protected void onEnable() {
         switch (type.getValue()) {
             case "Info":
-                NotificationManager.show(new Notification(Notification.NotificationType.INFO, "test","test on", time.getValue()));
+                //NotificationManager.show(new Notification(Notification.NotificationType.INFO, "test","test on", time.getValue()));
                 break;
             case "Alert":
-                NotificationManager.show(new Notification(Notification.NotificationType.ALERT, "test","test on", time.getValue()));
+                //NotificationManager.show(new Notification(Notification.NotificationType.ALERT, "test","test on", time.getValue()));
                 break;
             case "Warning":
-                NotificationManager.show(new Notification(Notification.NotificationType.WARNING, "test","test on", time.getValue()));
+                //NotificationManager.show(new Notification(Notification.NotificationType.WARNING, "test","test on", time.getValue()));
                 break;
         }
         
