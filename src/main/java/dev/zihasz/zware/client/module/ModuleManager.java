@@ -103,7 +103,9 @@ public class ModuleManager {
 		addMod(new AutoGG());
 		addMod(new AutoPorn());
 		addMod(new AutoReply());
+		addMod(new AutoShield());
 		addMod(new AutoTool());
+		addMod(new ChatDownloader());
 		addMod(new ChatModifier());
 		addMod(new ChatSuffix());
 		addMod(new DiscordRPCModule());
@@ -115,7 +117,6 @@ public class ModuleManager {
 		addMod(new MultiTask());
 		addMod(new NoEntityTrace());
 		addMod(new NoKick());
-		addMod(new NotificationTest());
 		addMod(new PvPInfo());
 		//Render
 		addMod(new BlockHighlight());

@@ -18,9 +18,10 @@ public abstract class Command {
 	public static boolean MsgWaterMark = true;
 	public static ChatFormatting cf = ChatFormatting.GRAY;
 
-	public static void sendClientMessage(String message){
+	public static void sendClientMessage(String message) {
+		if (mc.player == null) return;
 		Notifications.addMessage(new TextComponentString(cf + message));
-		if (Notifications.disableChat.getValue() && ModuleManager.isModuleEnabled("Notifications")){
+		if (Notifications.disableChat.getValue() && ModuleManager.isModuleEnabled("Notifications")) {
 			return;
 		}
 		else {
