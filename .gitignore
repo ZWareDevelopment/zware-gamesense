@@ -154,3 +154,20 @@ gradle-app.setting
 **/build/
 
 # End of https://www.toptal.com/developers/gitignore/api/java,intellij,gradle,forgegradle
+.classpath
+.project
+.settings/org.eclipse.jdt.core.prefs
+ZWare.cc_Client.launch
+ZWare.cc_Server.launch
+.settings/org.eclipse.buildship.core.prefs
+bin/main/win32-x86/discord-rpc.dll
+bin/main/win32-x86-64/discord-rpc.dll
+bin/main/mixins.gamesense.json
+bin/main/mcmod.info
+bin/main/linux-x86-64/libdiscord-rpc.so
+bin/main/gamesense_at.cfg
+bin/main/darwin/libdiscord-rpc.dylib
+bin/main/assets/gamesense/logo.png
+bin/main/assets/gamesense/gamesense.png
+bin/main/assets/gamesense/capewhite.png
+bin/main/assets/gamesense/capeblack.png
