@@ -7,7 +7,6 @@ import dev.zihasz.zware.api.event.events.RenderEvent;
 import dev.zihasz.zware.api.util.render.GameSenseTessellator;
 import dev.zihasz.zware.client.module.modules.combat.*;
 import dev.zihasz.zware.client.module.modules.misc.*;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import org.lwjgl.input.Keyboard;
 
 import dev.zihasz.zware.client.module.modules.exploits.CoordExploit;
@@ -110,7 +109,7 @@ public class ModuleManager {
 		addMod(new DiscordRPCModule());
 		addMod(new FastPlace());
 		addMod(new FakePlayer());
-		addMod(new HoosiersDupe());
+		addMod(new ZihaszDupe());
 		addMod(new HotbarRefill());
 		addMod(new MCF());
 		addMod(new MultiTask());
