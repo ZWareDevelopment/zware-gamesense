@@ -2,8 +2,8 @@ package dev.zihasz.zware.client.module.modules.misc;
 
 import dev.zihasz.zware.api.settings.Setting;
 import dev.zihasz.zware.client.module.Module;
-import dev.zihasz.zware.client.notification.Notification;
-import dev.zihasz.zware.client.notification.NotificationManager;
+// import dev.zihasz.zware.client.notification.Notification;
+// import dev.zihasz.zware.client.notification.NotificationManager;
 
 import java.util.ArrayList;
 
