@@ -38,7 +38,7 @@ public class ChatDownloader extends Module {
 
     public void setup() {
         folderPath = Paths.get(fileName + cdlName);
-        filePath = Paths.get(fileName + cdlName + "ChatDownload_" + LocalDate.now());
+        filePath = Paths.get(fileName + cdlName + "ChatDownload_" + mc.serverName + "_" + LocalDate.now());
     }
 
     public void onEnable() {

@@ -83,6 +83,8 @@ public class ModuleManager {
 		addMod(new SmartOffhand());
 		addMod(new Surround());
 		//Exploits
+		addMod(new AntiPacket());
+		addMod(new AutoPorn());
 		addMod(new CoordExploit());
 		addMod(new FastBreak());
 		addMod(new LiquidInteract());
@@ -101,7 +103,7 @@ public class ModuleManager {
 		//Misc
 		addMod(new Announcer());
 		addMod(new AutoGG());
-		addMod(new AutoPorn());
+		addMod(new AutoQMain());
 		addMod(new AutoReply());
 		addMod(new AutoShield());
 		addMod(new AutoTool());
@@ -116,6 +118,7 @@ public class ModuleManager {
 		addMod(new MCF());
 		addMod(new MultiTask());
 		addMod(new NoEntityTrace());
+		addMod(new NoHandshake());
 		addMod(new NoKick());
 		addMod(new PvPInfo());
 		//Render

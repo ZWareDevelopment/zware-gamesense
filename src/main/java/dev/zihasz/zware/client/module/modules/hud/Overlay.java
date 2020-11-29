@@ -32,7 +32,7 @@ public class Overlay extends Module {
 
     public void onRender(){
         if (watermark.getValue()){
-            FontUtils.drawStringWithShadow(ColorMain.customFont.getValue(), "GameSense " + ZWareMod.MODVER, watermarkX.getValue(), watermarkY.getValue(), color.getValue());
+            FontUtils.drawStringWithShadow(ColorMain.customFont.getValue(), "ZWare.cc " + ZWareMod.MODVER, watermarkX.getValue(), watermarkY.getValue(), color.getValue());
         }
 
         if (welcomer.getValue()){
