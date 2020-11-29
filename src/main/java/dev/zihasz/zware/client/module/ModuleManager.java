@@ -110,6 +110,7 @@ public class ModuleManager {
 		addMod(new ChatDownloader());
 		addMod(new ChatModifier());
 		addMod(new ChatSuffix());
+		addMod(new ChestAura());
 		addMod(new DiscordRPCModule());
 		addMod(new FastPlace());
 		addMod(new FakePlayer());
