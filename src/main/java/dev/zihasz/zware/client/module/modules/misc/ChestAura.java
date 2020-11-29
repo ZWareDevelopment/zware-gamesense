@@ -22,7 +22,7 @@ import net.minecraft.util.math.Vec3d;
  * @since 11/29/2020
  */
 public class ChestAura extends Module {
-	private static CopyOnWriteArrayList<TileEntity> ignoredList = new CopyOnWriteArrayList<TileEntity>();
+	private CopyOnWriteArrayList<TileEntity> ignoredList = new CopyOnWriteArrayList<TileEntity>();
 	Setting.Double range = registerDouble("Range", "ChestAuraRange", 4, 0.1, 6);
 	Setting.Boolean chests = registerBoolean("Chests", "ChestAuraChests", true);
 	Setting.Boolean shulkers = registerBoolean("Shulkers", "ChestAuraShulkers", false);
