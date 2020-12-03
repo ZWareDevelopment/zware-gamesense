@@ -16,27 +16,17 @@ import net.minecraft.util.math.Vec3d;
  * @since 11/29/2020
  */
 public class ChestAura extends Module {
-	private static CopyOnWriteArrayList<TileEntity> ignoredList = new CopyOnWriteArrayList<>();
-	Setting.Double 	range;
-	Setting.Boolean chests;
-	Setting.Boolean shulkers;
-	Setting.Boolean hoppers;
-	Setting.Boolean furnaces;
-	Setting.Boolean dispensers;
-	Setting.Boolean droppers;
+	private CopyOnWriteArrayList<TileEntity> ignoredList = new CopyOnWriteArrayList<>();
+	Setting.Double range = registerDouble("Range", "ChestAuraRange", 4, 0.1, 6);
+	Setting.Boolean chests = registerBoolean("Chests", "ChestAuraChests", true);
+	Setting.Boolean shulkers = registerBoolean("Shulkers", "ChestAuraShulkers", false);
+	Setting.Boolean hoppers = registerBoolean("Hoppers", "ChestAuraHoppers", false);
+	Setting.Boolean furnaces = registerBoolean("Furnaces", "ChestAuraFurnaces", false);
+	Setting.Boolean dispensers = registerBoolean("Dispensers", "ChestAuraDispensers", false);
+    Setting.Boolean droppers = registerBoolean("Droppers", "ChestAuraDroppers", false);
 	
 	public ChestAura() {
 		super("ChestAura", Category.Misc);
-	}
-
-	public void setup() {
-		range = 		registerDouble("Range", "ChestAuraRange", 4, 0.1, 6);
-		chests = 		registerBoolean("Chests", "ChestAuraChests", true);
-		shulkers = 		registerBoolean("Shulkers", "ChestAuraShulkers", false);
-		hoppers = 		registerBoolean("Hoppers", "ChestAuraShulkers", false);
-		furnaces =		registerBoolean("Furnaces", "ChestAuraShulkers", false);
-		dispensers =	registerBoolean("Dispensers", "ChestAuraDispensers", false);
-		droppers = 		registerBoolean("Droppers", "ChestAuraDroppers", false);
 	}
 
 	public void onUpdate() {
@@ -49,7 +39,7 @@ public class ChestAura extends Module {
 				 (e instanceof TileEntityHopper && hoppers.getValue()) || (e instanceof TileEntityFurnace && furnaces.getValue()) ||
 				 (e instanceof TileEntityDispenser && dispensers.getValue()) || (e instanceof TileEntityDropper && droppers.getValue()))
 			{
-				mc.playerController.processRightClickBlock(mc.player, mc.world, e.getPos(), EnumFacing.UP, new Vec3d(0, 0, 0), EnumHand.MAIN_HAND);
+				mc.playerController.processRightClickBlock(mc.player, mc.world, e.getPos(), EnumFacing.UP, new Vec3d(990, 0, 0), EnumHand.MAIN_HAND);
 				mc.player.connection.sendPacket(new CPacketCloseWindow());
 				ignoredList.add(e);
 			}

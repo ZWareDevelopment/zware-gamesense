@@ -242,7 +242,6 @@ public class GameSenseTessellator {
 			FontUtils.drawStringWithShadow(ColorMain.customFont.getValue(),text[i],-FontUtils.getStringWidth(ColorMain.customFont.getValue(),text[i])/2,i*(mc.fontRenderer.FONT_HEIGHT+1)+start,color);
 		}
 		GlStateManager.disableTexture2D();
-		// TODO CFontRenderer state leak exists. Fixing it breaks the GUI. Fixing it, will make disabling GL_TEXTURE_2D unnecessary.
 		if (type!=2) GlStateManager.popMatrix();
 	}
 
