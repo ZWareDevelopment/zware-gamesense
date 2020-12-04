@@ -5,6 +5,8 @@ import dev.zihasz.zware.client.command.Command;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.SecureRandom;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Text {
     public static String toUnicode(String s) {
@@ -89,5 +91,11 @@ public class Text {
             out = hash.toString();
         } catch (Exception e) {}
         return out;
+    }
+    public static String formatForChatDownload(String server) {
+        String fDate = "[" + LocalDate.now() + " " + LocalTime.now() + "]";
+        String fServer = "(" + server + ")";
+
+        return fDate + " " + fServer;
     }
 }

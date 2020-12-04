@@ -20,8 +20,8 @@ public class ChestAura extends Module {
 	Setting.Double range = registerDouble("Range", "ChestAuraRange", 4, 0.1, 6);
 	Setting.Boolean chests = registerBoolean("Chests", "ChestAuraChests", true);
 	Setting.Boolean shulkers = registerBoolean("Shulkers", "ChestAuraShulkers", false);
-	Setting.Boolean hoppers = registerBoolean("Hoppers", "ChestAuraShulkers", false);
-	Setting.Boolean furnaces = registerBoolean("Furnaces", "ChestAuraShulkers", false);
+	Setting.Boolean hoppers = registerBoolean("Hoppers", "ChestAuraHoppers", false);
+	Setting.Boolean furnaces = registerBoolean("Furnaces", "ChestAuraFurnaces", false);
 	Setting.Boolean dispensers = registerBoolean("Dispensers", "ChestAuraDispensers", false);
 	Setting.Boolean droppers = registerBoolean("Droppers", "ChestAuraDroppers", false);
 	
@@ -35,10 +35,11 @@ public class ChestAura extends Module {
 		for(TileEntity e : mc.world.loadedTileEntityList) {
 			if(ignoredList.contains(e) || mc.player.getDistance(e.getPos().x, e.getPos().y, e.getPos().z) > range.getValue())return;
 			
-			if((e instanceof TileEntityChest && chests.getValue()) || (e instanceof TileEntityShulkerBox && shulkers.getValue()) ||
-			(e instanceof TileEntityHopper && hoppers.getValue()) || (e instanceof TileEntityFurnace && furnaces.getValue()) ||
-			(e instanceof TileEntityDispenser && dispensers.getValue()) || (e instanceof TileEntityDropper && droppers.getValue())) {
-				mc.playerController.processRightClickBlock(mc.player, mc.world, e.getPos(), EnumFacing.UP, new Vec3d(0, 0, 0), EnumHand.MAIN_HAND);
+			if ( (e instanceof TileEntityChest && chests.getValue()) || (e instanceof TileEntityShulkerBox && shulkers.getValue()) ||
+				 (e instanceof TileEntityHopper && hoppers.getValue()) || (e instanceof TileEntityFurnace && furnaces.getValue()) ||
+				 (e instanceof TileEntityDispenser && dispensers.getValue()) || (e instanceof TileEntityDropper && droppers.getValue()))
+			{
+				mc.playerController.processRightClickBlock(mc.player, mc.world, e.getPos(), EnumFacing.UP, new Vec3d(990, 0, 0), EnumHand.MAIN_HAND);
 				mc.player.connection.sendPacket(new CPacketCloseWindow());
 				ignoredList.add(e);
 			}

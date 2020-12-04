@@ -19,8 +19,6 @@ import net.minecraft.tileentity.*;
 
 /**
  * @Author Hoosiers on 09/22/2020
- * todo: Create custom outlines for entities
- * todo: Basic wallhack/chams option???
  */
 
 public class ESP extends Module {

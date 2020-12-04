@@ -53,7 +53,6 @@ public class Announcer extends Module {
 	public Setting.Boolean clickGui;
 	Setting.Integer delay;
 
-	//TODO: Multilingual announcer :D
 	public static String walkMessage = "I just walked{blocks} meters thanks to ZWare.cc!";
 	public static String placeMessage = "I just inserted{amount}{name} into the muliverse thanks to ZWare.cc!";
 	public static String jumpMessage = "I just hovered in the air thanks to ZWare.cc!";
