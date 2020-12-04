@@ -42,6 +42,7 @@ public class SaveConfig {
     String moduleName = "Modules/";
     String mainName = "Main/";
     String miscName = "Misc/";
+    String downloadsName = "ChatDownloads/";
 
     public void saveConfig() throws IOException {
         if (!Files.exists(Paths.get(fileName))){
@@ -55,6 +56,9 @@ public class SaveConfig {
         }
         if (!Files.exists(Paths.get(fileName + miscName))){
             Files.createDirectories(Paths.get(fileName + miscName));
+        }
+        if (!Files.exists(Paths.get(fileName + downloadsName))){
+            Files.createDirectories(Paths.get(fileName + downloadsName));
         }
     }
 
