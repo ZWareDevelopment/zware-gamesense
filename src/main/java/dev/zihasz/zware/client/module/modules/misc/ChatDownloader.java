@@ -52,7 +52,7 @@ public class ChatDownloader extends Module {
     @EventHandler
     private final Listener<ClientChatEvent> onChatReceived = new Listener<>(event -> {
         try {
-            writer.write(Text.formatForChatDownload(mc.serverName + ":" + mc.serverPort) + " " + event.getMessage() + "\n");
+            writer.append(Text.formatForChatDownload(mc.serverName + ":" + mc.serverPort)).append(" ").append(event.getMessage()).append("\n");
             writer.flush();
         } catch (IOException e) {
             e.printStackTrace();

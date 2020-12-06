@@ -58,4 +58,18 @@ public class GSColor extends Color {
 	public void glColor() {
 		GlStateManager.color(getRed()/255.0f,getGreen()/255.0f,getBlue()/255.0f,getAlpha()/255.0f);
 	}
+
+	public static int GenRainbow() {
+		final float[] hue = { System.currentTimeMillis() % 11520L / 11520.0f };
+		final int rgb = Color.HSBtoRGB(hue[0], 1.0f, 1.0f);
+		final int red = rgb >> 16 & 0xFF;
+		final int green = rgb >> 8 & 0xFF;
+		final int blue = rgb & 0xFF;
+		final int color = toRGBA(red, green, blue, 255);
+		return color;
+	}
+
+	public static int toRGBA(final double r, final double g, final double b, final double a) {
+		return toRGBA((float)r, (float)g, (float)b, (float)a);
+	}
 }

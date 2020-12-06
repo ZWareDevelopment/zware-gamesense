@@ -68,7 +68,9 @@ public class ModuleManager {
 		addMod(new AutoLog());
 		addMod(new AutoTotem());
 		addMod(new AutoTrap());
+		addMod(new AutoTrapBed());
 		addMod(new AutoWeb());
+		addMod(new BedAura());
 		addMod(new BedBomb());
 		addMod(new FastBow());
 		addMod(new FootExp());
