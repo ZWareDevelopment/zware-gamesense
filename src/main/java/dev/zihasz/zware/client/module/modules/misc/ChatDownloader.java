@@ -4,7 +4,7 @@ import dev.zihasz.zware.api.util.misc.Text;
 import dev.zihasz.zware.client.module.Module;
 import me.zero.alpine.listener.EventHandler;
 import me.zero.alpine.listener.Listener;
-import net.minecraftforge.client.event.ClientChatReceivedEvent;
+import net.minecraftforge.client.event.ClientChatEvent;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -50,9 +50,9 @@ public class ChatDownloader extends Module {
     }
 
     @EventHandler
-    private final Listener<ClientChatReceivedEvent> onChatReceived = new Listener<>(event -> {
+    private final Listener<ClientChatEvent> onChatReceived = new Listener<>(event -> {
         try {
-            writer.write(Text.formatForChatDownload(mc.serverName + ":" + mc.serverPort) + "\n");
+            writer.append(Text.formatForChatDownload(mc.serverName + ":" + mc.serverPort)).append(" ").append(event.getMessage()).append("\n");
             writer.flush();
         } catch (IOException e) {
             e.printStackTrace();
