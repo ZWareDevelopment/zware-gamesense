@@ -61,7 +61,7 @@ public class KillAura extends Module {
 			if (swordOnly.getValue() && !(mc.player.getHeldItemMainhand().getItem() instanceof ItemSword)) {
 				return;
 			}
-			if (caCheck.getValue() && ((AutoCrystal) ModuleManager.getModuleByName("AutoCrystalGS")).isActive) {
+			if (caCheck.getValue() && ((AutoCrystal) ModuleManager.getModuleByName("AutoCrystal")).isActive) {
 				return;
 			}
 			attack(target);

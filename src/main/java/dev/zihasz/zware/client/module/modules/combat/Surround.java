@@ -309,7 +309,7 @@ public class Surround extends Module {
 
         boolean stoppedAC = false;
 
-        if (ModuleManager.isModuleEnabled("AutoCrystalGS")){
+        if (ModuleManager.isModuleEnabled("AutoCrystal")){
             AutoCrystal.stopAC = true;
             stoppedAC = true;
         }
